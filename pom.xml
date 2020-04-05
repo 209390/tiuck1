@@ -8,5 +8,22 @@
     <artifactId>Lab1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <version>1.27.0</version>
+                <configuration>
+                    <java>
+                        <eclipse>
+                            <file>${basedir}/eclipse-fmt.xml</file>
+                            <version>4.7.1</version>
+                        </eclipse>
+                    </java>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
